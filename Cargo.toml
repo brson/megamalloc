@@ -1,0 +1,65 @@
+[package]
+name = "megamalloc"
+version = "0.1.0"
+authors = ["Brian Anderson <andersrb@gmail.com>"]
+edition = "2018"
+
+[features]
+default = ["system_alloc", "global"]
+
+# Allocaors
+system_alloc = ["alloc"]
+jemalloc = ["alloc", "_jemallocator", "_jemalloc-ctl"]
+ralloc = ["alloc", "_ralloc"]
+tcmalloc = ["alloc", "_tcmalloc"]
+
+# Define the global allocator
+global = []
+
+# A marker indicating _some_ allocator is selected
+alloc = []
+
+[dependencies._jemallocator]
+package = "jemallocator"
+version = "0.3.0"
+optional = true
+features = ["unprefixed_malloc_on_supported_platforms"]
+
+[dependencies._jemalloc-ctl]
+package = "jemalloc-ctl"
+version = "0.3.0"
+optional = true
+features = ["use_std"]
+
+[dependencies._ralloc]
+package = "ralloc"
+version = "1.0.0"
+optional = true
+
+[dependencies._tcmalloc]
+package = "tcmalloc"
+version = "0.2.0"
+optional = true
+
+[patch.crates-io.jemalloc-ctl]
+git = "https://github.com/brson/jemallocator.git"
+rev = "bd3745f342a2182e978f85ba551e5e55e70ab0cd"
+#path = "../jemallocator/jemalloc-ctl"
+
+[patch.crates-io.jemalloc-sys]
+git = "https://github.com/brson/jemallocator.git"
+rev = "bd3745f342a2182e978f85ba551e5e55e70ab0cd"
+#path = "../jemallocator/jemalloc-sys"
+
+# waiting on https://gitlab.redox-os.org/redox-os/ralloc/issues/62
+[patch.crates-io.ralloc]
+git = "https://gitlab.redox-os.org/redox-os/ralloc.git"
+rev = "b9233b9fd25d184d53d41bc2ea1c389aed642f7e"
+
+[patch.crates-io.tcmalloc]
+#git = "https://github.com/brson/tcmalloc-rs.git"
+#rev = "b4d7c725d0955d239ee466589cffb1f0a6a3c267"
+path = "../tcmalloc-rs"
+
+[dependencies]
+failure = "0.1.5"
