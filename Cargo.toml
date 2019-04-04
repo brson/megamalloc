@@ -38,9 +38,11 @@ optional = true
 
 [dependencies._tcmalloc]
 package = "tcmalloc"
-version = "0.2.0"
+version = "0.3.0"
 optional = true
 
+# waiting on https://github.com/gnzlbg/jemallocator/pull/121
+# waiting on https://github.com/gnzlbg/jemallocator/issues/113
 [patch.crates-io.jemalloc-ctl]
 git = "https://github.com/brson/jemallocator.git"
 rev = "bd3745f342a2182e978f85ba551e5e55e70ab0cd"
@@ -57,9 +59,9 @@ git = "https://gitlab.redox-os.org/redox-os/ralloc.git"
 rev = "b9233b9fd25d184d53d41bc2ea1c389aed642f7e"
 
 [patch.crates-io.tcmalloc]
-#git = "https://github.com/brson/tcmalloc-rs.git"
-#rev = "b4d7c725d0955d239ee466589cffb1f0a6a3c267"
-path = "../tcmalloc-rs"
+git = "https://github.com/brson/tcmalloc-rs.git"
+rev = "5cc6886a60008384a6cf502f05577ceafe08f295"
+#path = "../tcmalloc-rs"
 
 [dependencies]
 failure = "0.1.5"
