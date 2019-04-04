@@ -22,6 +22,9 @@
   - https://www.gnu.org/software/libc/manual/html_node/Unconstrained-Allocation.html#Unconstrained-Allocation
 
 - docs
+  - https://gperftools.github.io/gperftools/tcmalloc.html
+    - this one has metric docs
+  - https://gperftools.github.io/gperftools/index.html
   - http://goog-perftools.sourceforge.net/doc/tcmalloc.html
   - http://pages.cs.wisc.edu/~danb/google-perftools-0.98/tcmalloc.html
 
