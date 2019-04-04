@@ -21,6 +21,10 @@
 - metrics and tuning
   - https://www.gnu.org/software/libc/manual/html_node/Unconstrained-Allocation.html#Unconstrained-Allocation
 
+- important metrics
+  - allocation / deallocation time, median and max
+  - allocated size, unallocated size
+
 - docs
   - https://gperftools.github.io/gperftools/tcmalloc.html
     - this one has metric docs
