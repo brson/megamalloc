@@ -5,13 +5,33 @@
   - ralloc
   - ptmalloc2
   - libumem
+  - nedmalloc
   - make an independent crate
+  - lockless https://locklessinc.com/downloads/
   - https://github.com/emeryberger/Malloc-Implementations/
   - http://hoard.org/ 
   - https://github.com/emeryberger/DieHard
 
 - benchmarking
   - http://www.highlandsun.com/hyc/malloc/
+  - https://locklessinc.com/benchmarks_allocator.shtml
+  - https://locklessinc.com/downloads/t-test1.c
+  - https://github.com/f18m/malloc-benchmarks
 
 - metrics and tuning
   - https://www.gnu.org/software/libc/manual/html_node/Unconstrained-Allocation.html#Unconstrained-Allocation
+
+- docs
+  - http://goog-perftools.sourceforge.net/doc/tcmalloc.html
+  - http://pages.cs.wisc.edu/~danb/google-perftools-0.98/tcmalloc.html
+
+- todo
+  - tcmalloc needs to build libunwind, libgcc will deadlock
+    - per https://github.com/gperftools/gperftools/blob/master/INSTALL#L33
+
+- ideas
+  - heap checker https://github.com/gperftools/gperftools/blob/master/src/gperftools/heap-checker.h
+  - heap profiler https://github.com/gperftools/gperftools/blob/master/src/gperftools/heap-profiler.h
+  - do the things pprof does - mprof
+  - t-test1 comparisons
+
