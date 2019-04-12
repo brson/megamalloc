@@ -11,6 +11,7 @@
   - https://github.com/emeryberger/Malloc-Implementations/
   - http://hoard.org/ 
   - https://github.com/emeryberger/DieHard
+  - https://github.com/ezrosent/allocators-rs
 
 - benchmarking
   - http://www.highlandsun.com/hyc/malloc/
