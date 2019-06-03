@@ -6,6 +6,7 @@
   - ptmalloc2
   - libumem
   - nedmalloc
+  - https://github.com/mjansson/rpmalloc
   - make an independent crate
   - lockless https://locklessinc.com/downloads/
   - https://github.com/emeryberger/Malloc-Implementations/
