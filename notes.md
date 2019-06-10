@@ -13,6 +13,7 @@
   - http://hoard.org/ 
   - https://github.com/emeryberger/DieHard
   - https://github.com/ezrosent/allocators-rs
+  - https://github.com/GrapheneOS/hardened_malloc
 
 - benchmarking
   - http://www.highlandsun.com/hyc/malloc/
